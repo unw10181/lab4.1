@@ -56,3 +56,10 @@ function checkEligibility(age, isEmployed) {
 
 console.log(checkEligibility(20, false));
 console.log(checkEligibility(21, true));
+
+// How did you approach creating more flexible functions with parameters?
+// I approached it by assessing the parameter type and what it would be used for in function. 
+// What challenges did you face while incorporating conditional logic in your functions?
+// I found that it was very easy to make mistakes in conditional logic so I had to be careful. 
+// How does refactoring improve the readability and maintainability of your code?
+// It reduces the lines of code and made logic simpler to follow.  
