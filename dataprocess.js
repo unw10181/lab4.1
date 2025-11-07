@@ -10,7 +10,7 @@ function formatFullName(firstName, lastName) {
 
 console.log(formatFullName("daniel", "williams"));
 
-function calculateTotalCost(price, quantity, taxRate) {
+function calculateTotalCost(price, quantity, taxRate, discount = 0) {
   if (
     typeof price === "number" &&
     typeof quantity === "number" &&
@@ -18,31 +18,15 @@ function calculateTotalCost(price, quantity, taxRate) {
   ) {
     let totalCost;
     totalCost = price * quantity;
+    totalCost -= totalCost * discount;
     totalCost *= taxRate + 1;
-    return + "Your total is: " + totalCost;
+    return "Your total is: " + totalCost;
   } else {
     return "Invalid input";
   }
 }
 
-function calculateTotalCost(price, quantity, taxRate, discount) {
-  if (
-    typeof price === "number" &&
-    typeof quantity === "number" &&
-    typeof taxRate === "number" &&
-    typeof discount === "number"
-  ) {
-    let totalCost;
-    totalCost = price * quantity;
-    totalCost -= totalCost * discount
-    totalCost *= taxRate + 1;
-    return totalCost;
-  } else {
-    return "Invalid input";
-  }
-}
-
-console.log(calculateTotalCost(6, 3, 1, .2));
+console.log(calculateTotalCost(6, 3, 1, 0.2));
 
 function checkEligibility(age, isEmployed) {
   if (age >= 18 && isEmployed == true) {
@@ -54,12 +38,12 @@ function checkEligibility(age, isEmployed) {
   }
 }
 
-console.log(checkEligibility(20, false));
-console.log(checkEligibility(21, true));
+// console.log(checkEligibility(20, false));
+// console.log(checkEligibility(21, true));
 
 // How did you approach creating more flexible functions with parameters?
-// I approached it by assessing the parameter type and what it would be used for in function. 
+// I approached it by assessing the parameter type and what it would be used for in function.
 // What challenges did you face while incorporating conditional logic in your functions?
-// I found that it was very easy to make mistakes in conditional logic so I had to be careful. 
+// I found that it was very easy to make mistakes in conditional logic so I had to be careful.
 // How does refactoring improve the readability and maintainability of your code?
-// It reduces the lines of code and made logic simpler to follow.  
+// It reduces the lines of code and made logic simpler to follow.
