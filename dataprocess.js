@@ -8,7 +8,7 @@ function formatFullName(firstName, lastName) {
   return properFirstName + " " + properLastName;
 }
 
-//console.log(formatFullName("daniel", "williams"));
+console.log(formatFullName("daniel", "williams"));
 
 function calculateTotalCost(price, quantity, taxRate) {
   if (
@@ -53,4 +53,6 @@ function checkEligibility(age, isEmployed) {
     return "You are not eligible";
   }
 }
+
 console.log(checkEligibility(20, false));
+//console.log(checkEligibility(21, true));
