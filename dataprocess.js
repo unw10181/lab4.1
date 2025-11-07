@@ -55,4 +55,4 @@ function checkEligibility(age, isEmployed) {
 }
 
 console.log(checkEligibility(20, false));
-//console.log(checkEligibility(21, true));
+console.log(checkEligibility(21, true));
